@@ -1,20 +1,20 @@
 import { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-import LocationMarker from './LocationMarker'
+import Marker from './Marker'
 import LocationInfo from './LocationInfo'
 
 const Map = ({ eventData, center, zoom }) => {
     const [locationInfo, setLocationInfo] = useState(null)
 
     const markers = eventData.map((ev) => {
-        if (ev.categories[0].id === 8) {
-            // 8 = wildfire
-            console.log(ev.id)
+        // Ignore volcanoes with multiple coords:
+        if (typeof ev.geometries[0].coordinates[0] !== 'object') {
             return (
-                <LocationMarker
+                <Marker
                     key={ev.id}
                     lat={ev.geometries[0].coordinates[1]}
                     lng={ev.geometries[0].coordinates[0]}
+                    type={ev.categories[0].id}
                     onClick={() =>
                         setLocationInfo({ id: ev.id, title: ev.title })
                     }
@@ -40,13 +40,13 @@ const Map = ({ eventData, center, zoom }) => {
     )
 }
 
-// Default props with default location
+// Default props with default location (Rome)
 Map.defaultProps = {
     center: {
-        lat: 42.3265,
-        lng: -122.8756
+        lat: 41.9028,
+        lng: 12.4964
     },
-    zoom: 6
+    zoom: 5
 }
 
 export default Map

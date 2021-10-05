@@ -4,10 +4,10 @@ const LocationInfo = ({ info }) => {
             <h2>Event info</h2>
             <ul>
                 <li>
-                    ID: <strong>{info.id}</strong>
+                    <strong>id:</strong> {info.id}
                 </li>
                 <li>
-                    Title: <strong>{info.title}</strong>
+                    <strong>Title: </strong> {info.title}
                 </li>
             </ul>
         </div>

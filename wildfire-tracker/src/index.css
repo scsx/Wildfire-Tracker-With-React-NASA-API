@@ -20,16 +20,6 @@ body {
     padding-top: 3rem;
 }
 
-.location-icon {
-    font-size: 2rem;
-    color: red;
-    cursor: pointer;
-}
-
-.location-icon:hover {
-    color: darkred;
-}
-
 .info {
     background-color: white;
     position: absolute;
@@ -47,4 +37,50 @@ body {
 
 .info ul {
     padding-left: 1rem;
+}
+
+.location-marker {
+    position: relative;
+}
+
+.location-icon {
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.location-icon.fire {
+    color: orangered;
+    font-size: 1.75rem;
+}
+
+.location-icon.fire:hover {
+    color: red;
+}
+
+.location-icon.ice {
+    color: #0E86D4;
+}
+
+.location-icon.ice:hover {
+    color: navy;
+}
+
+.location-icon.storms {
+    color: gray;
+    font-size: 2.25rem;
+}
+
+.location-icon.storms:hover {
+    color: #333;
+}
+
+.location-icon.volcano {
+    color: brown;
+}
+
+.location-icon.volcano:hover {
+    color: #7f0f0f;
 }
