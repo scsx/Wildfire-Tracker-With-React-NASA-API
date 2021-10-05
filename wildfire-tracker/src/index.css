@@ -5,10 +5,46 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #aadaff;
+    color: #0E86D4;
 }
 
 .map {
     position: relative;
     width: 100vw;
     height: 100vh;
+}
+
+.loader {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.location-icon {
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.location-icon:hover {
+    color: darkred;
+}
+
+.info {
+    background-color: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    color: black;
+    max-width: 33%;
+    border: 1px solid #cdcdcd;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info ul {
+    padding-left: 1rem;
 }
