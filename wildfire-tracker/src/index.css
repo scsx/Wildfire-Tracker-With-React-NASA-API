@@ -84,3 +84,9 @@ body {
 .location-icon.volcano:hover {
     color: #7f0f0f;
 }
+
+li.links a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}

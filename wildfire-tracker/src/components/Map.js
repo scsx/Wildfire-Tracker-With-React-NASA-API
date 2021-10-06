@@ -16,12 +16,11 @@ const Map = ({ eventData, center, zoom }) => {
                     lng={ev.geometries[0].coordinates[0]}
                     type={ev.categories[0].id}
                     onClick={() =>
-                        setLocationInfo({ id: ev.id, title: ev.title })
+                        setLocationInfo({ id: ev.id, title: ev.title, sources: ev.sources })
                     }
                 />
             )
         }
-
         return null
     })
 
